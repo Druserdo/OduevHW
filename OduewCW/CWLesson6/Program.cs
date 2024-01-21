@@ -63,49 +63,52 @@
 
 //Первый продукт
 
+const string ADDRESS = "г.Калмнмнград ул.Шмудлера д.5";
+DateTime currentDate = DateTime.Now;
+const string ORGANIZATIONNAME = "OOO\"Семейный магазин\"";
+const string CHECKLIST = "Название\tЦена\t\tКол-во\t\tСумма\n\n*****************************************************\n\n";
 
-Console.Write("Укажите продукт 1:");
+//Первый продукт
+Console.Write("Укажите продукт:");
 string firstProductName = Console.ReadLine();
 
-Console.Write($"Укажите цену за продукт {firstProductName}:");
+Console.Write($"Укажите цену продукта {firstProductName}:");
 string firstProductPrise = Console.ReadLine();
 
-Console.Write($"Укажите количетво продукта {firstProductName}, по цене {firstProductPrise}:");
+Console.Write($"Укажите количетво продукта {firstProductName}:");
 string firstProductQuantity = Console.ReadLine();
 
-int firstTotal= int.Parse(firstProductPrise)*int.Parse(firstProductQuantity);
+int firstTotal = int.Parse(firstProductPrise) * int.Parse(firstProductQuantity);
 
 //Второй продукт
 
-
-Console.Write("Укажите продукт 1:");
+Console.Write("Укажите продукт:");
 string secondProductName = Console.ReadLine();
 
-Console.Write($"Укажите цену за продукт {secondProductName}:");
+Console.Write($"Укажите цену за продукт  {secondProductName}:");
 string secondProductPrise = Console.ReadLine();
 
-Console.Write($"Укажите количетво продукта {secondProductName}, по цене {secondProductPrise}:");
+Console.Write($"Укажите количетво продукта {secondProductName},:");
 string secondProductQuantity = Console.ReadLine();
 
 int secondTotal = int.Parse(secondProductPrise) * int.Parse(secondProductQuantity);
+
 //Третий продукт
 
-
-Console.Write("Укажите продукт 1:");
+Console.Write("Укажите продукт:");
 string thirdProductName = Console.ReadLine();
 
 Console.Write($"Укажите цену за продукт {thirdProductName}:");
 string thirdProductPrise = Console.ReadLine();
 
-Console.Write($"Укажите количетво продукта {thirdProductName}, по цене {thirdProductPrise}:");
+Console.Write($"Укажите количетво продукта {thirdProductName},:");
 string thirdProductQuantity = Console.ReadLine();
 
 int thirdTotal = int.Parse(thirdProductPrise) * int.Parse(thirdProductQuantity);
 
 //Четвертый продукт
 
-
-Console.Write("Укажите продукт 1:");
+Console.Write("Укажите продукт:");
 string fourthProductName = Console.ReadLine();
 
 Console.Write($"Укажите цену за продукт {fourthProductName}:");
@@ -114,7 +117,9 @@ string fourthProductPrise = Console.ReadLine();
 Console.Write($"Укажите количетво продукта {fourthProductName}, по цене {fourthProductPrise}:");
 string fourthProductQuantity = Console.ReadLine();
 
-int fourthdTotal = int.Parse( fourthProductPrise) * int.Parse( fourthProductQuantity);
+int fourthdTotal = int.Parse(fourthProductPrise) * int.Parse(fourthProductQuantity);
 
+int totalAmount = firstTotal + secondTotal + thirdTotal + firstTotal;
 //чек
-Console.WriteLine($"\t\tOOO\"Рога и копыта\"\t\t");
+Console.WriteLine($"\t{ORGANIZATIONNAME}\n\t{ADDRESS}\n\t{currentDate}\n{CHECKLIST}");
+Console.WriteLine($"{firstProductName}\t\t{firstProductPrise}\t\t{firstProductQuantity}\t\t{firstTotal}\n{secondProductName}\t\t{secondProductPrise}\t\t{secondProductQuantity}\t\t{secondTotal}\n{thirdProductName}\t\t{thirdProductPrise}\t\t{thirdProductQuantity}\t\t{thirdTotal}\n{firstProductName}\t\t{firstProductPrise}\t\t{firstProductQuantity}\t\t{firstTotal}\n\n*****************************************************\n\n\t\tИТОГ:\t\t\t\t{totalAmount}\a");
