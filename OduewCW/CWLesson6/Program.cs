@@ -123,3 +123,4 @@ int totalAmount = firstTotal + secondTotal + thirdTotal + firstTotal;
 //чек
 Console.WriteLine($"\t{ORGANIZATIONNAME}\n\t{ADDRESS}\n\t{currentDate}\n{CHECKLIST}");
 Console.WriteLine($"{firstProductName}\t\t{firstProductPrise}\t\t{firstProductQuantity}\t\t{firstTotal}\n{secondProductName}\t\t{secondProductPrise}\t\t{secondProductQuantity}\t\t{secondTotal}\n{thirdProductName}\t\t{thirdProductPrise}\t\t{thirdProductQuantity}\t\t{thirdTotal}\n{firstProductName}\t\t{firstProductPrise}\t\t{firstProductQuantity}\t\t{firstTotal}\n\n*****************************************************\n\n\t\tИТОГ:\t\t\t\t{totalAmount}\a");
+

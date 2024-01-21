@@ -1,5 +1,18 @@
-﻿Console.WriteLine("======================================");
-const string name = "Название";
-const string price = "Цена";
-Console.WriteLine($"  {name}          {price}  К-во   Сумма");
-Console.WriteLine()
+﻿const string LINE = "---------------------------------------------";
+const string TITLEPAGE = "N  Название\t\tЦена\tКол. \tСумма";
+const double NDS18 = 0.18;
+const double NDS10 = 0.1;
+const int PRICE1= 69;
+const int PRICE2 = 70;
+int quantity1 = 1;
+int quantity2 = 2;
+int sum1=PRICE1*quantity1;
+int sum2=PRICE2*quantity2;
+double sum1Nds=sum1*NDS18;
+double sum2Nds=sum2*NDS10;
+string firstProduct = $"1  КОФЕ СТАНДАРТНЫЙ\t{PRICE1}\t{quantity1}\t{sum1}";
+string secondProduct = $"2  РУЛЕТ-СПРИНГ ТВ ИЗ\t{PRICE2}\t{quantity2}\t{sum2}";
+string lineNds1 = $"НДС с расчитанной \nставкой 18%\t\t\t\t{sum1Nds}";
+string lineNds2 = $"НДС с расчитанной \nставкой 10%\t\t\t\t{sum2Nds}";
+double totalPrice= sum1+sum2;
+Console.WriteLine($"{LINE}\n{TITLEPAGE}\n\n{firstProduct}\n{lineNds1}\n\n{secondProduct}\n{lineNds2}\n\n\nИТОГО:\t\t\t\t\t{totalPrice}\n\nЭлектронные средства\t\t\t{totalPrice}\nНДС итога чека\t\t\t\t{sum1Nds}\nс раситанной ставкой\n18%\nНДС итога чека с \t\t\t{sum2Nds}\nрасчитанной ставкой\n10%\n\n{LINE}\nВИД НАЛОГООБЛАЖЕНИЯ: ОСН\nРЕГ.НОМЕР ККТ: 0000143873023483\nЗАВОД.N:\nФН N: 871000010065168\nФД N: 6226\nФПД:3322278314");
