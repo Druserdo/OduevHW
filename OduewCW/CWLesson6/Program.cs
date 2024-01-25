@@ -88,7 +88,7 @@ string secondProductName = Console.ReadLine();
 Console.Write($"Укажите цену за продукт  {secondProductName}:");
 string secondProductPrise = Console.ReadLine();
 
-Console.Write($"Укажите количетво продукта {secondProductName},:");
+Console.Write($"Укажите количетво продукта {secondProductName}:");
 string secondProductQuantity = Console.ReadLine();
 
 int secondTotal = int.Parse(secondProductPrise) * int.Parse(secondProductQuantity);
@@ -101,7 +101,7 @@ string thirdProductName = Console.ReadLine();
 Console.Write($"Укажите цену за продукт {thirdProductName}:");
 string thirdProductPrise = Console.ReadLine();
 
-Console.Write($"Укажите количетво продукта {thirdProductName},:");
+Console.Write($"Укажите количетво продукта {thirdProductName}:");
 string thirdProductQuantity = Console.ReadLine();
 
 int thirdTotal = int.Parse(thirdProductPrise) * int.Parse(thirdProductQuantity);
