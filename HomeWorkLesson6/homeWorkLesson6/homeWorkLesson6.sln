@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "homeWorkLesson6", "homeWorkLesson6.csproj", "{7035DC57-F07A-45DB-83EE-ABBA286F7349}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "homeWorkLesson6", "homeWorkLesson6.csproj", "{7035DC57-F07A-45DB-83EE-ABBA286F7349}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HWLesson6Take2", "..\HWLesson6Take2\HWLesson6Take2.csproj", "{0D0CB80B-6453-42FE-BEC7-0141DB48691E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7035DC57-F07A-45DB-83EE-ABBA286F7349}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7035DC57-F07A-45DB-83EE-ABBA286F7349}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7035DC57-F07A-45DB-83EE-ABBA286F7349}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D0CB80B-6453-42FE-BEC7-0141DB48691E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D0CB80B-6453-42FE-BEC7-0141DB48691E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D0CB80B-6453-42FE-BEC7-0141DB48691E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D0CB80B-6453-42FE-BEC7-0141DB48691E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

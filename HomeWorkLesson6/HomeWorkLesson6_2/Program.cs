@@ -1,1 +1,12 @@
-﻿
+﻿Console.Write("Введите длинну в метрах:");
+double lengthMeters= double.Parse(Console.ReadLine());
+Console.Write("Введите вес в килограммах:");
+string stringWeightKg = Console.ReadLine();
+double WeightKg = double.Parse(stringWeightKg);
+double lengthMM = lengthMeters * 1000;
+string stringLenghthMM=lengthMM.ToString();
+Console.WriteLine($"{lengthMeters}м = {stringLenghthMM}мм.");
+Console.WriteLine($"stringLenghthMM {stringLenghthMM.GetType()}");
+double WeightGg = WeightKg * 1000;
+Console.WriteLine($"{WeightKg} кг= {WeightGg} гр.");
+Console.WriteLine($"WeightGg {WeightGg.GetType()}");
