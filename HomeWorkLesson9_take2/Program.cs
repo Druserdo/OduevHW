@@ -1,0 +1,13 @@
+﻿long a = 264895468854;
+Console.WriteLine(~a);
+long b = 256;
+Console.WriteLine(~b);
+int c = 256;
+Console.WriteLine($"вправо {c>>2}");
+Console.WriteLine($"влево {c<<2}");
+int  d = 32856;
+Console.WriteLine(d>>2);
+Console.WriteLine(d<<2);
+int e = 289;
+e = 144;
+e = 36274;
