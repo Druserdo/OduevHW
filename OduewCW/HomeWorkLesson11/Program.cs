@@ -42,6 +42,7 @@ int min7 = Math.Min(min6, num8);
 int min8 = Math.Min(min7, num9);
 int min9 = Math.Min(min8, num10);
 Console.WriteLine($"Мнимальное число {min9}");
+
 if (num1 > 10)
     big++;
 if (num2 > 10) 
@@ -50,23 +51,38 @@ if (num3 > 10)
     big++;
 if (num4 > 10)
     big++;
-if (num5 > 10) big++;
-if (num6 > 10) big++;
-if (num7 > 10) big++;
-if (num8 > 10) big++;
-if (num9 > 10) big++;
-if (num10 > 10) big++;
+if (num5 > 10) 
+    big++;
+if (num6 > 10) 
+    big++;
+if (num7 > 10) 
+    big++;
+if (num8 > 10) 
+    big++;
+if (num9 > 10) 
+    big++;
+if (num10 > 10) 
+    big++;
 Console.WriteLine($"{big} чисел больше 10.");
 if (num1 < -10)
     small++;
-if (num2 < -10) small++;
-if (num3 < -10) small++;
-if (num4 < -10) small++;
-if (num5 < -10) small++;
-if (num6 < -10) small++;
-if (num7 < -10) small++;
-if (num8 < -10) small++;
-if (num9 < -10) small++;
-if (num10 < -10) small++;
+if (num2 < -10) 
+    small++;
+if (num3 < -10) 
+    small++;
+if (num4 < -10) 
+    small++;
+if (num5 < -10) 
+    small++;
+if (num6 < -10) 
+    small++;
+if (num7 < -10) 
+    small++;
+if (num8 < -10) 
+    small++;
+if (num9 < -10) 
+    small++;
+if (num10 < -10) 
+    small++;
 Console.WriteLine($"{small} чисел меньше -10.");
 Console.WriteLine($"Среднее арифметическое {sum/10}");
