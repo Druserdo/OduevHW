@@ -1,6 +1,6 @@
 ﻿Console.Write("Введите номер месяца:");
 int numMonth=int.Parse(Console.ReadLine());
-if (numMonth == 12 || numMonth == 2 || numMonth == 3)
+if (numMonth == 12 || numMonth == 1 || numMonth == 2)
 {
     Console.Write("Введите температуру:");
     int t = int.Parse(Console.ReadLine());
@@ -13,7 +13,7 @@ if (numMonth == 12 || numMonth == 2 || numMonth == 3)
     if (t > 0)
         Console.WriteLine("Дождливая зима!");
 }
-else if (numMonth >= 1 && numMonth <= 12)
+else if (numMonth >= 3 && numMonth <= 11)
 {
     switch (numMonth)
     {
@@ -28,5 +28,5 @@ else if (numMonth >= 1 && numMonth <= 12)
         case 11: Console.WriteLine("Ноябрь"); break;
     }
 }
-else
+else 
     Console.WriteLine("Такого месяца нет!");
