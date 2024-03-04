@@ -1,12 +1,15 @@
-﻿//Console.Write("Укажите длинну пароля:");
-//int longPas=int.Parse(Console.ReadLine());
-//Random random=new Random();
-//for (int i = 0; i < longPas; i++)
-//{
+﻿Console.Write("Укажите длинну пароля:");
+int longPas = int.Parse(Console.ReadLine());
+Random random = new Random();
 
-//}
-
-Console.WriteLine((int)'A');
+string pass = "";
+int pass0;
+for (int i = 0; i < longPas; i++)
+{
+    pass0=random.Next(48,123);
+    Console.Write((char)pass0);
+}
+//Console.WriteLine((int)'A');
 //Console.WriteLine((int)'Z');
 //Console.WriteLine((int)'a');
 //Console.WriteLine((int)'z');
