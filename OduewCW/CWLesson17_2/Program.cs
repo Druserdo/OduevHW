@@ -76,40 +76,79 @@
 //    if (Array.IndexOf(i.ToArray(), c) == 0)
 //        Console.Write(i + " ");
 //}
-Random random = new Random();
-string[] mas = new string[6];
-string name1 = "Mark";
-string name2 = "Bogdan";
-string name3 = "Vika";
-string name4 = "Dodora";
-string name5 = "Veronika";
-string name6 = "Warya";
-for (int i = 0; i < mas.Length; i++)
-{
-    switch(random.Next(6))
-    {
-        case 0:mas[i] = name1;break;
-        case 1: mas[i] = name2; break;
-        case 2: mas[i] = name3; break;
-        case 3: mas[i] = name4; break;
-        case 4: mas[i] = name5; break;
-        case 5: mas[i] = name6; break;
-    }
-    Console.Write(mas[i]+" ");
-}
-Console.WriteLine();
-do 
-{
-    Console.Write("Введите имя:");
-    string nameUser=Console.ReadLine();
-    while(Array.IndexOf(mas, nameUser)!=-1)
-    {
-        mas[Array.IndexOf(mas, nameUser)] = "Dell";
-    }
-    Console.Write("Продолжить у/н:");
-    char answer =char.Parse(Console.ReadLine());
-    if (answer == 'n') break;
-}
-while (true);
-foreach (string i in mas)  
-if (i !="Dell")  Console.Write(i+" ");
+//Random random = new Random();
+//string[] mas = new string[6];
+//string name1 = "Mark";
+//string name2 = "Bogdan";
+//string name3 = "Vika";
+//string name4 = "Dodora";
+//string name5 = "Veronika";
+//string name6 = "Warya";
+//for (int i = 0; i < mas.Length; i++)
+//{
+//    switch(random.Next(6))
+//    {
+//        case 0:mas[i] = name1;break;
+//        case 1: mas[i] = name2; break;
+//        case 2: mas[i] = name3; break;
+//        case 3: mas[i] = name4; break;
+//        case 4: mas[i] = name5; break;
+//        case 5: mas[i] = name6; break;
+//    }
+//    Console.Write(mas[i]+" ");
+//}
+//Console.WriteLine();
+//do 
+//{
+//    Console.Write("Введите имя:");
+//    string nameUser=Console.ReadLine();
+//    while(Array.IndexOf(mas, nameUser)!=-1)
+//    {
+//        mas[Array.IndexOf(mas, nameUser)] = "Dell";
+//    }
+//    Console.Write("Продолжить у/н:");
+//    char answer =char.Parse(Console.ReadLine());
+//    if (answer == 'n') break;
+//}
+//while (true);
+//foreach (string i in mas)  
+//if (i !="Dell")  Console.Write(i+" ");
+//Console.Write("Введите размер массива:");
+//int n=int.Parse(Console.ReadLine());
+//int[] mas1=new int[n];
+//int[] mas2=new int[n];
+//int[] mas3=new int[n];
+//Random rand = new Random();
+//for (int i = 0;i < mas1.Length; i++)
+//{
+//    mas1[i] = rand.Next(10,100);
+//    mas2[i] = rand.Next(10, 100);
+//    mas3[i] = mas1[i] - mas2[i];
+//}
+//foreach (int i in mas1) Console.Write(i+" ");
+//Console.WriteLine();
+//foreach (int i in mas2) Console.Write(i + " ");
+//Console.WriteLine();
+//foreach (int i in mas3) Console.Write(i + " ");
+//Console.WriteLine();
+
+//Console.Write("Введите размер массива:");
+//int n = int.Parse(Console.ReadLine());
+//double[] mas1 = new double[n];
+//Random rand = new Random();
+//for (int i = 0; i < mas1.Length; i++)
+//{
+//    mas1[i] = rand.NextDouble()*100;
+//    Console.Write($"{mas1[i]:F2} ");
+//}
+//Console.WriteLine();
+//Array.Reverse(mas1);
+//string strMas1 = "";
+//foreach (double i in mas1)
+//{
+//    Console.Write($"{i:F2} ");
+//    strMas1 += i.ToString("F2")+ " ";
+//}
+//Console.WriteLine();
+//Console.WriteLine(strMas1);
+//Console.WriteLine(strMas1.Substring(0,strMas1.Length/2-1));
