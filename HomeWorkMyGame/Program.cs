@@ -3,6 +3,11 @@ int choice =int.Parse(Console.ReadLine());
 Random random = new Random();
 string[,] mins=new string[10,10];
 int count = 0;
+int wins = 0;
+int loss = 0;
+int attempt = 0;
+bool exit=true;
+string statistics = $"Попыток:{attempt}\nВыиграно:{wins}\nПроигрышей:{loss}";
 for (int i = 0; i < mins.GetLength(0); i++)
 {
     Console.Clear();
@@ -27,17 +32,52 @@ switch (choice)
     case 1:
         {
             string[,] userMass = new string[10, 10];
-            for (int i = 0;i < userMass.GetLength(0);i++)
+            for (int i = 0; i < userMass.GetLength(0); i++)
             {
-                for (int j = 0;j < userMass.GetLength(1);j++) 
+                for (int j = 0; j < userMass.GetLength(1); j++)
                 {
-                    userMass[i, j] = $"{i+1},{j+1}";
-                    Console.Write(userMass[i,j]);
+                    userMass[i, j] = $"{i + 1},{j + 1} ";
+                    Console.Write(userMass[i, j]);
                 }
                 Console.WriteLine();
             }
-            Console.Write("Введите клетку:");
-            
+            do
+            {
+                Console.Write("Введите горизонталь:");
+                int userHorizontal = int.Parse(Console.ReadLine());
+                Console.Write("Введите вертикаль:");
+                int userVertical = int.Parse(Console.ReadLine());
+                if (mins[userHorizontal - 1, userHorizontal - 1] == userMass[userHorizontal - 1, userVertical - 1])
+                {
+                    Console.WriteLine("БАМ");
+                    attempt++;
+                    loss++;
+                    exit = false;
+                }
+                else
+                {
+                    Console.Clear();
+                    for (int i = 0; i < userMass.GetLength(0); i++)
+                    {
+                        for (int j = 0; j < userMass.GetLength(1); j++)
+                        {
+                            userMass[userHorizontal - 1, userVertical - 1] = "## ";
+                            Console.Write(userMass[i, j]);
+                        }
+                        Console.WriteLine();
+                    }
+                }
+            }
+            while (exit);
+                {
+                Console.Write(statistics);
+                }
+                break;
         }
+    case 2:
+        Console.WriteLine(statistics); 
         break;
-}  
+    case 3:
+        break;
+        
+}
