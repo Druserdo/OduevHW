@@ -1,6 +1,7 @@
 ﻿Random random = new Random();
 int n = random.Next(1, 6);
 int[,] mas = new int[3,n];
+double sumAll = 0;
 
 for (int i = 0; i < mas.GetUpperBound(0) + 1; i++)
 {
@@ -11,7 +12,9 @@ for (int i = 0; i < mas.GetUpperBound(0) + 1; i++)
         Console.Write(mas[i, j] + " ");
         summ += mas[i, j];
     }
-    
+    sumAll += summ;
     Console.WriteLine();
     Console.WriteLine(summ+" ");
 }
+double awg=sumAll/(mas.GetLength(0)*mas.GetLength(1));
+Console.Write($"Среднее арифметическое ={awg:F2}") ;
