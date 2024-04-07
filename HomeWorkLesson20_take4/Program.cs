@@ -41,6 +41,7 @@ int[,] summMass(int[,] array, int[,]array2)
             masSum[i, j] = array[i, j] + array2[i, j]; 
         }
     }
+    return masSum;
 }
    
 Console.WriteLine("Сумма двух предыдущих");
