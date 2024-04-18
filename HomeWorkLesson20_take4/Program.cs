@@ -1,67 +1,58 @@
-﻿
-Random random = new Random();
-int[,] mas1=new int[4,4];
-int[,] mas2 = new int[4, 4];
-
-
+﻿Random random = new Random();
+int[,] mas1 = new int[4, 3];
+int[,] mas2 = new int[4, 3];
 for (int i = 0; i < mas1.GetLength(0); i++)
 {
     for (int j = 0; j < mas1.GetLength(1); j++)
     {
-        mas1[i, j] = random.Next(1, 100) - 50;
+        mas1[i, j] = random.Next(-50, 51);
+        Console.Write(mas1[i, j] + " ");
     }
+    Console.WriteLine();
 }
-for (int i = 0;i < mas2.GetLength(0);i++)
+Console.WriteLine();
+for (int i = 0; i < mas2.GetLength(0); i++)
 {
     for (int j = 0; j < mas2.GetLength(1); j++)
-    { 
-        mas2[i, j] = random.Next(1, 100) - 50;
+    {
+        mas2[i, j] = random.Next(-50, 51);
+        Console.Write(mas2[i, j] + " ");
     }
+    Console.WriteLine();
 }
-
-Console.WriteLine("Первый массив");
-PrintMatrix(mas1);
-Console.WriteLine("Второй массив");
-PrintMatrix(mas2);
-Console.WriteLine("Сумма двух предыдущих");
-PrintMatrix(SummMass(mas1, mas2));
-
-
-void PrintMatrix(int[,] mas)
+Console.WriteLine();
+int[,] masSum = Sum(mas1, mas2);
+for (int i = 0; i < masSum.GetLength(0); i++)
 {
+    for (int j = 0; j < masSum.GetLength(1); j++)
+    {
+        Console.Write(masSum[i, j] + " ");
+    }
+    Console.WriteLine();
+}
+Console.WriteLine();
+Console.WriteLine("Max=" + Max(masSum));
+int[,] Sum(int[,] m1, int[,] m2)
+{
+    int[,] mas = new int[m1.GetLength(0), m1.GetLength(1)];
+    for (int i = 0; i < m1.GetLength(0); i++)
+    {
+        for (int j = 0; j < m1.GetLength(1); j++)
+        {
+            mas[i, j] = m1[i, j] + m2[i, j];
+        }
+    }
+    return mas;
+}
+int Max(int[,] mas)
+{
+    int max = mas[0, 0];
     for (int i = 0; i < mas.GetLength(0); i++)
     {
         for (int j = 0; j < mas.GetLength(1); j++)
         {
-            Console.Write(mas[i, j] + " ");
-        }
-        Console.WriteLine();
-    }
-}
-int[,] SummMass(int[,] array, int[,] array2)
-{
-    int[,] masSum = new int[array.GetLength(0), array.GetLength(1)];
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            masSum[i, j] = array[i, j] + array2[i, j];
+            if (mas[i, j] > max) max = mas[i, j];
         }
     }
-    return masSum;
+    return max;
 }
-
-int[,] array = SummMass(mas1, mas2);
-int max = 0;
-
-for (int i = 0; i < array.GetLength(0); i++)
-{
-    for (int j = 0; j < array.GetLength(1); j++)
-    {
-        if (array[i, j] > max)
-        {
-            max = array[i, j];
-        }
-    }
-}
-Console.WriteLine(max);
