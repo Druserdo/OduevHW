@@ -32,11 +32,11 @@
             label2 = new Label();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
-            listBox1 = new ListBox();
-            pictureBox1 = new PictureBox();
-            button1 = new Button();
-            label3 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            lbxMaterial = new ListBox();
+            pbxMaterial = new PictureBox();
+            btResult = new Button();
+            lbResult = new Label();
+            ((System.ComponentModel.ISupportInitialize)pbxMaterial).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -44,18 +44,18 @@
             label1.AutoSize = true;
             label1.Location = new Point(75, 83);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(52, 15);
             label1.TabIndex = 0;
-            label1.Text = "label1";
+            label1.Text = "Ширина";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Location = new Point(75, 116);
             label2.Name = "label2";
-            label2.Size = new Size(38, 15);
+            label2.Size = new Size(47, 15);
             label2.TabIndex = 1;
-            label2.Text = "label2";
+            label2.Text = "Высота";
             // 
             // textBox1
             // 
@@ -71,56 +71,56 @@
             textBox2.Size = new Size(120, 23);
             textBox2.TabIndex = 3;
             // 
-            // listBox1
+            // lbxMaterial
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(50, 171);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(226, 214);
-            listBox1.TabIndex = 4;
+            lbxMaterial.FormattingEnabled = true;
+            lbxMaterial.ItemHeight = 15;
+            lbxMaterial.Items.AddRange(new object[] { "Алюминий", "Пластик", "Дерево", "Бамбук" });
+            lbxMaterial.Location = new Point(50, 171);
+            lbxMaterial.Name = "lbxMaterial";
+            lbxMaterial.Size = new Size(226, 214);
+            lbxMaterial.TabIndex = 4;
             // 
-            // pictureBox1
+            // pbxMaterial
             // 
-            pictureBox1.Location = new Point(400, 75);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(343, 310);
-            pictureBox1.TabIndex = 5;
-            pictureBox1.TabStop = false;
+            pbxMaterial.Location = new Point(400, 75);
+            pbxMaterial.Name = "pbxMaterial";
+            pbxMaterial.Size = new Size(343, 310);
+            pbxMaterial.TabIndex = 5;
+            pbxMaterial.TabStop = false;
             // 
-            // button1
+            // btResult
             // 
-            button1.Location = new Point(50, 451);
-            button1.Name = "button1";
-            button1.Size = new Size(204, 55);
-            button1.TabIndex = 6;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btResult.Location = new Point(50, 451);
+            btResult.Name = "btResult";
+            btResult.Size = new Size(204, 55);
+            btResult.TabIndex = 6;
+            btResult.Text = "Подсчитать";
+            btResult.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // lbResult
             // 
-            label3.Location = new Point(400, 451);
-            label3.Name = "label3";
-            label3.Size = new Size(343, 69);
-            label3.TabIndex = 7;
-            label3.Text = "label3";
+            lbResult.Location = new Point(400, 451);
+            lbResult.Name = "lbResult";
+            lbResult.Size = new Size(343, 69);
+            lbResult.TabIndex = 7;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(816, 548);
-            Controls.Add(label3);
-            Controls.Add(button1);
-            Controls.Add(pictureBox1);
-            Controls.Add(listBox1);
+            Controls.Add(lbResult);
+            Controls.Add(btResult);
+            Controls.Add(pbxMaterial);
+            Controls.Add(lbxMaterial);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbxMaterial).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -131,9 +131,9 @@
         private Label label2;
         private TextBox textBox1;
         private TextBox textBox2;
-        private ListBox listBox1;
-        private PictureBox pictureBox1;
-        private Button button1;
-        private Label label3;
+        private ListBox lbxMaterial;
+        private PictureBox pbxMaterial;
+        private Button btResult;
+        private Label lbResult;
     }
 }

@@ -9,4 +9,21 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="all.jpeg" />
+    <None Remove="bambuk.jpeg" />
+    <None Remove="pla.webp" />
+    <None Remove="wood.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="all.jpeg" />
+    <Resource Include="bambuk.jpeg" />
+    <Resource Include="pla.webp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="wood.jpg" />
+  </ItemGroup>
+
 </Project>
