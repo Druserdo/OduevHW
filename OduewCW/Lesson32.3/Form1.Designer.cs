@@ -30,8 +30,8 @@
         {
             label1 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            tbWidth = new TextBox();
+            tbHeight = new TextBox();
             lbxMaterial = new ListBox();
             pbxMaterial = new PictureBox();
             btResult = new Button();
@@ -57,19 +57,19 @@
             label2.TabIndex = 1;
             label2.Text = "Высота";
             // 
-            // textBox1
+            // tbWidth
             // 
-            textBox1.Location = new Point(156, 75);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(120, 23);
-            textBox1.TabIndex = 2;
+            tbWidth.Location = new Point(156, 75);
+            tbWidth.Name = "tbWidth";
+            tbWidth.Size = new Size(120, 23);
+            tbWidth.TabIndex = 2;
             // 
-            // textBox2
+            // tbHeight
             // 
-            textBox2.Location = new Point(156, 108);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(120, 23);
-            textBox2.TabIndex = 3;
+            tbHeight.Location = new Point(156, 108);
+            tbHeight.Name = "tbHeight";
+            tbHeight.Size = new Size(120, 23);
+            tbHeight.TabIndex = 3;
             // 
             // lbxMaterial
             // 
@@ -80,12 +80,14 @@
             lbxMaterial.Name = "lbxMaterial";
             lbxMaterial.Size = new Size(226, 214);
             lbxMaterial.TabIndex = 4;
+            lbxMaterial.SelectedIndexChanged += lbxMaterial_SelectedIndexChanged;
             // 
             // pbxMaterial
             // 
             pbxMaterial.Location = new Point(400, 75);
             pbxMaterial.Name = "pbxMaterial";
             pbxMaterial.Size = new Size(343, 310);
+            pbxMaterial.SizeMode = PictureBoxSizeMode.StretchImage;
             pbxMaterial.TabIndex = 5;
             pbxMaterial.TabStop = false;
             // 
@@ -97,13 +99,16 @@
             btResult.TabIndex = 6;
             btResult.Text = "Подсчитать";
             btResult.UseVisualStyleBackColor = true;
+            btResult.Click += btResult_Click;
             // 
             // lbResult
             // 
+            lbResult.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
             lbResult.Location = new Point(400, 451);
             lbResult.Name = "lbResult";
             lbResult.Size = new Size(343, 69);
             lbResult.TabIndex = 7;
+            lbResult.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -114,12 +119,12 @@
             Controls.Add(btResult);
             Controls.Add(pbxMaterial);
             Controls.Add(lbxMaterial);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(tbHeight);
+            Controls.Add(tbWidth);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Конструктор";
             ((System.ComponentModel.ISupportInitialize)pbxMaterial).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -129,8 +134,8 @@
 
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox tbWidth;
+        private TextBox tbHeight;
         private ListBox lbxMaterial;
         private PictureBox pbxMaterial;
         private Button btResult;

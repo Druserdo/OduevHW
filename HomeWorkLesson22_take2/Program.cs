@@ -1,7 +1,7 @@
 ﻿try
 {
     Console.Write("Введите список чисел разделенных пробелом:");
-    string listNum = Console.ReadLine();
+    string listNum = Console.ReadLine()!;
     int sum = 0;
     string[] masNum = listNum.Split(' ');
     int[] mas=new int[masNum.Length];
@@ -13,7 +13,11 @@
     Console.WriteLine(sum);
 
 }
-catch(Exception ex)
+ catch(FormatException e)//правильность формата ввода строки
 {
-
+    Console.WriteLine(e.Message);
+}
+catch(ArgumentOutOfRangeException e)
+{
+    Console.WriteLine(e.Message);
 }
