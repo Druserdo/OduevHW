@@ -1,9 +1,9 @@
 ﻿Console.Write("Введите путь к папке:");
-string path=Console.ReadLine();
+string path=Console.ReadLine()+"\\";
 Console.Write("Введите текст для записи:");
-string content=Console.ReadLine();
+string content=Console.ReadLine()!;
 
-File.WriteAllText(path, content);
+File.WriteAllText(@path,content);
 if (File.Exists(@path))
     Console.WriteLine("Файл успешно записан!");
 else Console.WriteLine("Попробуйте еще раз!");
