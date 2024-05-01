@@ -14,7 +14,7 @@ namespace CWLesson31
 
         private void btEdd_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btSub_Click(object sender, EventArgs e)
@@ -67,7 +67,7 @@ namespace CWLesson31
             }
         }
 
-       
+
 
         private void btEdd_Click_1(object sender, EventArgs e)
         {
@@ -82,6 +82,12 @@ namespace CWLesson31
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void bt1_Click(object sender, EventArgs e)
+        {
+            tbFirst.Clear();
+            tbSecond.Clear();
         }
     }
 }

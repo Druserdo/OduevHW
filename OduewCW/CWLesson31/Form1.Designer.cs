@@ -37,6 +37,7 @@
             btMult = new Button();
             btDiv = new Button();
             lbResult = new Label();
+            bt1 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -131,11 +132,22 @@
             lbResult.TabIndex = 8;
             lbResult.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // bt1
+            // 
+            bt1.Location = new Point(379, 362);
+            bt1.Name = "bt1";
+            bt1.Size = new Size(114, 46);
+            bt1.TabIndex = 9;
+            bt1.Text = "Очистка";
+            bt1.UseVisualStyleBackColor = true;
+            bt1.Click += bt1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(567, 792);
+            Controls.Add(bt1);
             Controls.Add(lbResult);
             Controls.Add(btDiv);
             Controls.Add(btMult);
@@ -164,5 +176,6 @@
         private Button btMult;
         private Button btDiv;
         private Label lbResult;
+        private Button bt1;
     }
 }
