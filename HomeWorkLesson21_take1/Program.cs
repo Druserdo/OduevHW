@@ -1,18 +1,19 @@
-﻿Console.Write("Введите путь к папке:");
-string path=Console.ReadLine()+"\\";
-Console.Write("Введите текст для записи:");
-string content=Console.ReadLine()!;
-
-File.WriteAllText(@path,content);
-if (File.Exists(@path))
-    Console.WriteLine("Файл успешно записан!");
-else Console.WriteLine("Попробуйте еще раз!");
-File.WriteAllText(path, content);
-
-FileInfo fileInf = new FileInfo(path);
-Console.Write("Введите новый путь:");
-string newPath=Console.ReadLine();
-if (fileInf.Exists)
+﻿try
 {
-    fileInf.CopyTo(newPath, true);
+    Console.WriteLine("Введите путь к файлу:");
+    string filePath = Console.ReadLine()!;
+    Console.WriteLine("Введите текст для записи в файл:");
+    string text = Console.ReadLine()!;
+    File.WriteAllText(@filePath, text);
+    Console.WriteLine("Файл успешно записан");
+    File.WriteAllText("Файл2.txt", "Это содержимое файла 2");
+    File.WriteAllText("Файл3.txt", "Это содержимое файла 3");
+    string fileContents = File.ReadAllText(@filePath);
+    Console.WriteLine("Содержимое файла " + Path.GetFileName(@filePath) + ":");
+    Console.WriteLine(fileContents);
 }
+catch (Exception e)
+{
+    Console.WriteLine("Ошибка при чтении файла: " + e.Message);
+}
+    
