@@ -1,4 +1,6 @@
-﻿namespace ClassLibrary1
+﻿using System.ComponentModel.Design;
+
+namespace ClassLibrary1
 {
     public class Class1
     {
@@ -30,9 +32,28 @@
         }
         public void Fill(int high)
         {
+            Random random = new Random();
+            if (mas[0].GetType() == typeof(int))
+            {
+                for (int i = 0; i < mas.Length; i++)
+                {
+                    string res = String.Empty;
+                    for (int j = 0; j < high; j++)
+                    {
+                        res += (char)random.Next(60, 127);
+                        mas[i] = res;
+                    }
+                }
+            }
+            else if (mas[0].GetType() == typeof(bool))
+            {
+                for(int i = 0;i < mas.Length; i++)
+                {
+                    if (random.Next(0, 2) == 0) mas[i] = false;
+                    else mas[i] = true;
+                }
+            }
 
         }
-
-
     }
 }
