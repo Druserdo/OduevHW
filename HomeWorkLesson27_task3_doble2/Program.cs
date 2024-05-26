@@ -1,6 +1,4 @@
 ﻿
-using static System.Runtime.InteropServices.JavaScript.JSType;
-
 class Numbers
 {
     public void CalculateAverage(int[] mas)
