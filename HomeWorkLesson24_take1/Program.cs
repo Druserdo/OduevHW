@@ -1,32 +1,24 @@
-﻿using System;
+﻿Console.WriteLine("Введите слово:");
+string word = Console.ReadLine()!.ToLower();
 
-class Program
+if (IsPalindrome(word, 0, word.Length - 1))
 {
-    static bool IsPalindrome(string word, int start, int end)
-    {
-        if (start >= end)
-        {
-            return true;
-        }
-        if (word[start] != word[end])
-        {
-            return false;
-        }
-        return IsPalindrome(word, start + 1, end - 1);
-    }
+    Console.WriteLine("Is a palindrom");
+}
+else
+{
+    Console.WriteLine("Not a palindrom");
+}
 
-    static void Main()
+bool IsPalindrome(string word, int start, int end)
+{
+    if (start >= end)
     {
-        Console.WriteLine("Введите слово:");
-        string word = Console.ReadLine()!.ToLower();
-
-        if (IsPalindrome(word, 0, word.Length - 1))
-        {
-            Console.WriteLine("Is a palindrom");
-        }
-        else
-        {
-            Console.WriteLine("Not a palindrom");
-        }
+        return true;
     }
+    if (word[start] != word[end])
+    {
+        return false;
+    }
+    return IsPalindrome(word, start + 1, end - 1);
 }
