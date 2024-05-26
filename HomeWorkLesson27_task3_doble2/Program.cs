@@ -1,4 +1,6 @@
 ﻿
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 class Numbers
 {
     public void CalculateAverage(int[] mas)
@@ -40,5 +42,64 @@ class Numbers
         }
         else return res = true;
     }
+    public int CalculateFactorial(int num)
+    {
+        int fact = 1;
+        for (int i = 0; i < num; i++)
+        {
+            fact = fact * (i + 1);
+        }
+        return fact;
+    }
+    public string ConvertToBinary(int num)
+    {
+        if (num == 0)
+        {
+            return "0";
+        }
 
+        string result = "";
+        while (num > 0)
+        {
+            int remainder = num % 2;
+            result = remainder + result;
+            num = num / 2;
+        }
+        return result;
+    }
+    public string ConvertToHex(int num)
+    {
+        string numOx = "0123456789ABCDEF";
+        if (num == 0)
+        {
+            return "0";
+        }
+        string result = "";
+        while (num > 0)
+        {
+            int remainder = num % 16;
+            result = numOx[remainder] + result;
+            num = num / 16;
+        }
+        return result;
+    }
+    public int CalculatePower(int num, int exponent)
+    {
+        if (exponent == 0)
+        {
+            return 1;
+        }
+        else if (exponent > 0)
+        {
+            for (int i = 1; i <= exponent; i++)
+            {
+                num *= num;
+            }
+            return num;
+        }
+        else
+        {
+            return 1 / CalculatePower(num, -exponent);
+        }
+    }
 }
