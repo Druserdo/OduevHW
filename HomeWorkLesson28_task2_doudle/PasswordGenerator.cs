@@ -1,8 +1,11 @@
-using System.Security.Cryptography.X509Certificates;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace HomeWorkLesson28_task1
+namespace HomeWorkLesson28_task2_doudle
 {
-
     public class PasswordGenerator
     {
         Random random = new Random();
@@ -13,7 +16,7 @@ namespace HomeWorkLesson28_task1
         {
             for (int i = 1; i <= 12; i++)
             {
-                password += alphabet[random.Next(0, alphabet.Length + 1)];
+                password += alphabet[random.Next(0, alphabet.Length - 1)];
             }
             return password.ToLower();
         }
@@ -21,7 +24,7 @@ namespace HomeWorkLesson28_task1
         {
             for (int i = 1; i <= 12; i++)
             {
-                password += alphabet[random.Next(0, alphabet.Length + 1)];
+                password += alphabet[random.Next(0, alphabet.Length - 1)];
             }
             return password.ToUpper();
         }
@@ -29,7 +32,7 @@ namespace HomeWorkLesson28_task1
         {
             for (int i = 1; i <= 12; i++)
             {
-                password += simvol[random.Next(0, simvol.Length + 1)];
+                password += simvol[random.Next(0, simvol.Length - 1)];
             }
             return password;
         }
@@ -38,25 +41,10 @@ namespace HomeWorkLesson28_task1
             string temp = alphabet.ToLower() + alphabet.ToUpper() + simvol;
             for (int i = 1; i <= 12; i++)
             {
-                password += temp[random.Next(0, temp.Length + 1)];
+                password += temp[random.Next(0, temp.Length - 1)];
             }
             return password;
         }
-    }
-
-
-    
-    public partial class Form1 : Form
-    {
-    
-        public Form1()
-        {
-            InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }
